@@ -6,7 +6,7 @@ RUN pacman -Syyu --noconfirm --needed \
     iproute2 net-tools wget \
     rsync git vim \
     zsh sudo \
-    xorg-xlogo python-pip
+    python-pip
 
 RUN rm -rfv /var/cache/pacman/pkg/*
 
