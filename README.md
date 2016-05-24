@@ -1,5 +1,5 @@
 [![Automated Build](http://img.shields.io/badge/automated-build-green.svg)](https://hub.docker.com/r/fdiblen/archsci/)
-
+[![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=master)](https://travis-ci.org/fdiblen/archsci)
 
 # archsci - Arch Linux Scientific
 - latest Arch Linux image
