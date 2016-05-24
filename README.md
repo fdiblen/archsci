@@ -22,3 +22,5 @@ docker pull fdiblen/archsci:latest
 docker pull fdiblen/archsci:julia
 ```
 ``` sh
+
+see [Julia branch] https://github.com/fdiblen/archsci/tree/julia
