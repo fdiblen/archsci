@@ -8,3 +8,6 @@ Arch Linux Scientific
 - Minimal image (no X11)
 - zsh shell, addons, powerline prompt and fonts
 - Pre-installed yaourt, vim, git
+
+Default shell prompt:
+![prompt](https://raw.githubusercontent.com/fdiblen/archsci/master/prompt.png)
