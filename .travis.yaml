@@ -1,12 +1,22 @@
 sudo: required
+
 services:
   - docker
-install:
-  - docker login --email=$DOCKER_HUB_EMAIL --username=$DOCKER_HUB_USERNAME --password=$DOCKER_HUB_PASSWORD
-
-script:
-  - docker build -t $DOCKER_IMAGE_NAME .
-  - if [ ! -z "$TRAVIS_TAG" ]; then docker tag $DOCKER_IMAGE_NAME:latest $DOCKER_IMAGE_NAME:$TRAVIS_TAG; fi && docker push $DOCKER_IMAGE_NAME
 
 env:
-  - DOCKER_IMAGE_NAME=fdiblen/archsci
+  # IMPORTANT! Add your docker slug here (commit once)
+  - DOCKER_REPO=fdiblen/archsci
+
+script:
+  # build latest image always
+  - docker build -t $DOCKER_REPO:latest .
+  # build the tagged image
+  - if [[ $TRAVIS_TAG = $TRAVIS_BRANCH ]]; then docker build -t $DOCKER_REPO:$TRAVIS_BRANCH .; else true ; fi
+
+after_success:
+  # IMPORTANT! Add the environment variables in Travis Build Environment (one time!)
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  # push to latest if master branch
+  - if [[ $TRAVIS_BRANCH = master ]]; then docker push $DOCKER_REPO:latest; else true; fi
+  # push tag as well
+  - if [[ $TRAVIS_TAG = $TRAVIS_BRANCH ]]; then docker push $DOCKER_REPO:$TRAVIS_TAG; else true ; fi
