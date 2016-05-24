@@ -8,7 +8,7 @@ env:
   - DOCKER_REPO=fdiblen/archsci
 
 script:
-  # build latest image always
+  # build master branch (latest) image always
   - docker build -t $DOCKER_REPO:latest .
   # build the tagged image
   - if [[ $TRAVIS_TAG = $TRAVIS_BRANCH ]]; then docker build -t $DOCKER_REPO:$TRAVIS_BRANCH .; else true ; fi
