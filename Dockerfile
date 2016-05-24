@@ -51,5 +51,4 @@ RUN /bin/zsh /home/archsci/setShell.bash \
     && rm -f /home/archsci/setShell.bash
 
 
-
 CMD ["/bin/zsh"]
