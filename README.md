@@ -6,7 +6,7 @@ Arch Linux Scientific
 - latest Arch Linux image
 - sudo support
 - Minimal image (no X11)
-- zsh shell, addons, powerline prompt and fonts
+- zsh shell, addons, powerline prompt(with git-status) and fonts
 - Pre-installed yaourt, vim, git
 
 Default shell prompt:
