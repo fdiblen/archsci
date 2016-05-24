@@ -1,0 +1,37 @@
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+#antigen theme robbyrussell
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+
+# Tell antigen that you're done.
+antigen apply
+
+
+
+# Set prompt
+prompt_say_docker() {
+  prompt_segment yellow blue "docker"
+}
+
+BULLETTRAIN_PROMPT_ORDER=(
+  time
+  status
+  context
+  virtualenv
+  cmd_exec_time
+  dir
+  git
+  say_docker
+)

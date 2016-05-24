@@ -2,7 +2,7 @@
 
 HOSTNAME="archsciDOCKER"
 export TERM="xterm-256color"
-
+export LANG=en_US.UTF-8
 
 # Theme
 ZSH_THEME="agnoster"
@@ -27,9 +27,3 @@ alias rm="rm -i"
 alias cd..="cd .."
 alias less='less -SR'
 alias grep='grep --color=always'
-
-
-# Powerline
-if [[ -r ~/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    .  ~/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
