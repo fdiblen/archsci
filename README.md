@@ -10,3 +10,15 @@
 
 Default shell prompt:
 ![prompt](https://raw.githubusercontent.com/fdiblen/archsci/master/prompt.png)
+
+
+# Howto get
+## base version
+```{r, engine='bash', count_lines}
+docker pull fdiblen/archsci:latest
+```
+# Julia version
+```{r, engine='bash', count_lines}
+docker pull fdiblen/archsci:julia
+```
+``` sh
