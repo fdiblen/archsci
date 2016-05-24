@@ -17,7 +17,7 @@ Default shell prompt:
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:latest
 ```
-# Julia version
+## Julia version
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:julia
 ```
