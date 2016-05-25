@@ -12,21 +12,24 @@ Default shell prompt:
 
 
 # Howto get
-## base version (307 MB)
+## base version
 [![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=master)](https://travis-ci.org/fdiblen/archsci)
+[![](https://imagelayers.io/badge/fdiblen/archsci:latest.svg)](https://imagelayers.io/?images=fdiblen/archsci:latest)
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:latest
 ```
 
-## Julia version (545 MB)
+## Julia version
 [![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=julia)](https://travis-ci.org/fdiblen/archsci)
+[![](https://imagelayers.io/badge/fdiblen/archsci:julia.svg)](https://imagelayers.io/?images=fdiblen/archsci:julia)
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:julia
 ```
 see [Julia branch]
 
-## Anaconda version (2 GB)
+## Anaconda version
 [![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=anaconda)](https://travis-ci.org/fdiblen/archsci)
+[![](https://imagelayers.io/badge/fdiblen/archsci:anaconda.svg)](https://imagelayers.io/?images=fdiblen/archsci:anaconda)
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:anaconda
 ```
