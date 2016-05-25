@@ -13,11 +13,11 @@ Default shell prompt:
 
 
 # Howto get
-## base version
+## base version (705.1 MB)
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:latest
 ```
-## Julia version
+## Julia version (1.23 GB)
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:julia
 ```
