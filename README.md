@@ -25,7 +25,7 @@ docker pull fdiblen/archsci:julia
 ```
 see [Julia branch]
 
-## Anaconda version ()
+## Anaconda version (2 GB)
 [![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=anaconda)](https://travis-ci.org/fdiblen/archsci)
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:anaconda
