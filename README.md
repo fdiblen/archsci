@@ -22,6 +22,14 @@ docker pull fdiblen/archsci:latest
 docker pull fdiblen/archsci:julia
 ```
 see [Julia branch]
+## Anaconda version
+```{r, engine='bash', count_lines}
+docker pull fdiblen/archsci:anaconda
+```
+see [Anaconda branch]
+
+
 
 [Julia branch]: https://github.com/fdiblen/archsci/tree/julia
+[Anaconda branch]: https://github.com/fdiblen/archsci/tree/anaconda
 
