@@ -20,3 +20,9 @@ after_success:
   - if [[ $TRAVIS_BRANCH = master ]]; then docker push $DOCKER_REPO:latest; else true; fi
   # push tag as well
   - if [[ $TRAVIS_TAG = $TRAVIS_BRANCH ]]; then docker push $DOCKER_REPO:$TRAVIS_TAG; else true ; fi
+  # trigger to build other branches as well
+  - curl -H "Content-Type: application/json" --data '{"docker_tag": "master"}' -X POST $DHUB_TRIGGER
+
+
+
+
