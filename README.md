@@ -15,8 +15,6 @@ Default shell prompt:
 ## base version
 [![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=master)](https://travis-ci.org/fdiblen/archsci)
 [![](https://imagelayers.io/badge/fdiblen/archsci:latest.svg)](https://imagelayers.io/?images=fdiblen/archsci:latest)
-[![ImageLayers Layers](https://img.shields.io/imagelayers/layers/_/archsci/latest.svg?maxAge=2592000)]()
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/_/archsci/latest.svg?maxAge=2592000)]()
 
 ```{r, engine='bash', count_lines}
 docker pull fdiblen/archsci:latest
