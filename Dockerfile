@@ -2,6 +2,9 @@ FROM pritunl/archlinux:latest
 
 MAINTAINER fdiblen
 
+ENV container docker
+ENV LC_ALL C
+
 RUN pacman -Syyu --noconfirm --needed \
     iproute2 net-tools wget curl \
     rsync unzip git vim \
