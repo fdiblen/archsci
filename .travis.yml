@@ -22,11 +22,9 @@ after_success:
   - if [[ $TRAVIS_TAG = $TRAVIS_BRANCH ]]; then docker push $DOCKER_REPO:$TRAVIS_TAG; else true ; fi
   #
   #
-  # trigger to build other branches as well
-  #
-  - curl $DHUB_TRIGGER
-
-
-
-
+  # notify Docker Hub to make a new build
+  - >
+    curl -X POST -H "Content-Type: application/json"
+    --data '{"build": "true"}'
+    https://registry.hub.docker.com/u/fdiblen/archsci/trigger/$DOCKER_HUB_TOKEN/
 
