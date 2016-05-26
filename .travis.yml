@@ -24,7 +24,7 @@ after_success:
   #
   # trigger to build other branches as well
   #
-  - curl -H $DHUB_TRIGGER
+  - curl $DHUB_TRIGGER
 
 
 

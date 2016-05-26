@@ -3,7 +3,7 @@ FROM pritunl/archlinux:latest
 MAINTAINER fdiblen
 
 RUN pacman -Syyu --noconfirm --needed \
-    iproute2 net-tools wget \
+    iproute2 net-tools wget curl \
     rsync unzip git vim \
     adobe-source-code-pro-fonts ttf-ubuntu-font-family terminus-font freetype2 \
     zsh sudo fontconfig ttf-symbola \
