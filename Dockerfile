@@ -5,6 +5,7 @@ MAINTAINER fdiblen
 RUN pacman -Syyu --noconfirm --needed \
     iproute2 net-tools wget \
     rsync unzip git vim \
+    adobe-source-code-pro-fonts ttf-ubuntu-font-family terminus-font freetype2 \
     zsh sudo fontconfig ttf-symbola \
     base-devel
 
