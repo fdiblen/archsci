@@ -32,6 +32,7 @@ USER archsci
 ENV HOME /home/archsci
 ENV DISPLAY :0
 ENV TERM xterm-256color
+ENV USER archsci
 
 
 
