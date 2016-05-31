@@ -22,17 +22,11 @@ wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbol
 
 # Font directories
 mkdir -p ~/.fonts/
-mkdir -p ~/.fonts.conf.d/
 mkdir -p ~/.config/fontconfig/conf.d/
 
 mv PowerlineSymbols.otf ~/.fonts/
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
-cp 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-mv 10-powerline-symbols.conf ~/.fonts.conf.d/
-
-## Patched fonts
-#mv 'SomeFont for Powerline.otf' ~/.fonts/
-#fc-cache -vf ~/.fonts/
 
 cd && git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 cd && rm -rf fonts
@@ -42,6 +36,5 @@ unzip Monoid.zip && mv *.ttf ~/.fonts/
 cd && rm -rf fonts Monoid.zip
 
 fc-cache -vf ~/.fonts/
-fc-cache -vf ~/.fonts.conf.d/
 fc-cache -vf ~/.config/fontconfig/conf.d/
 fc-cache -vf ~/.local/share/fonts
