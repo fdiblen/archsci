@@ -39,7 +39,6 @@ ENV TERM xterm-256color
 ENV USER archsci
 
 
-
 # install yaourt (credit heichblatt)
 RUN /usr/bin/mkdir -pv /tmp/yaourt_install && \
     cd /tmp/yaourt_install && \
@@ -52,6 +51,10 @@ RUN /usr/bin/mkdir -pv /tmp/yaourt_install && \
     /usr/sbin/sudo /usr/sbin/pacman -U yaourt*pkg*.tar.xz --noconfirm && \
     cd && \
     /usr/sbin/rm -rv /tmp/yaourt_install
+
+
+RUN yaourt -S --noconfirm --needed \
+    byobu
 
 
 RUN /bin/zsh /home/archsci/setShell.bash \
