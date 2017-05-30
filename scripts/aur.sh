@@ -64,3 +64,6 @@ makepkg --syncdeps --skippgpcheck --install --noconfirm
 
 cd "$HOME" || exit 1
 rm -rf "$buildroot"
+
+pacaur -S --noconfirm --needed \
+     byobu

@@ -39,7 +39,3 @@ cd && rm -rf fonts Monoid.zip
 fc-cache -vf ~/.fonts/
 fc-cache -vf ~/.config/fontconfig/conf.d/
 fc-cache -vf ~/.local/share/fonts
-
-# /bin/zsh
-# source /home/archsci/.antigen/bin/antigen.zsh
-# source /home/archsci/.antigen.archsci

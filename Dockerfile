@@ -48,6 +48,7 @@ RUN chown archsci:archsci -R /home/archsci
 USER archsci
 ENV HOME /home/archsci
 ENV DISPLAY :0
+ENV EDITOR vim
 ENV TERM xterm-256color
 ENV USER archsci
 
