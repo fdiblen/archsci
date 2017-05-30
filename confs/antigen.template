@@ -22,7 +22,7 @@ antigen apply
 
 # Set prompt
 prompt_say_docker() {
-  prompt_segment yellow blue "docker"
+  prompt_segment yellow blue "archsci"
 }
 
 BULLETTRAIN_PROMPT_ORDER=(

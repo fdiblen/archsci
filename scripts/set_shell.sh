@@ -1,16 +1,17 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Antigen
 echo "Setting antigen"
 echo
 
 git clone https://github.com/zsh-users/antigen.git ${HOME}/.antigen
-echo "source ${HOME}/.antigen/antigen.zsh" >> ${HOME}/.zshrc
+#echo "source ${HOME}/.antigen/antigen.zsh" >> ${HOME}/.zshrc
+echo "source /home/archsci/.antigen/bin/antigen.zsh" >> ${HOME}/.zshrc
 echo "source ${HOME}/.antigen.archsci" >> ${HOME}/.zshrc
 
-source ${HOME}/.antigen/antigen.zsh
-source ${HOME}/.antigen.archsci
-source ${HOME}/.zshrc
+source /home/archsci/.antigen/bin/antigen.zsh
+source /home/archsci/.antigen.archsci
+source /home/archsci/.zshrc
 
 
 # Fonts
@@ -38,3 +39,7 @@ cd && rm -rf fonts Monoid.zip
 fc-cache -vf ~/.fonts/
 fc-cache -vf ~/.config/fontconfig/conf.d/
 fc-cache -vf ~/.local/share/fonts
+
+# /bin/zsh
+# source /home/archsci/.antigen/bin/antigen.zsh
+# source /home/archsci/.antigen.archsci

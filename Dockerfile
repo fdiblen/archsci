@@ -22,12 +22,13 @@ COPY scripts/*.sh /home/archsci/temp/
 RUN chmod +x /home/archsci/temp/*.sh
 COPY confs/zshrc.template /home/archsci/.zshrc
 COPY confs/antigen.template /home/archsci/.antigen.archsci
+COPY confs/pacman.conf /home/archsci/temp
 
 
 # INSTALL AUR HELPER AND PACKAGES
 #===========================================
 RUN /home/archsci/temp/install_packages.sh
-RUN /home/archsci/temp/set_shell.sh
+
 
 
 # SET ENVIRONMENT, USER and SUDO
@@ -52,7 +53,9 @@ ENV USER archsci
 
 
 # AUR PACKAGES
-#===========================================s
+#===========================================
+WORKDIR /home/archsci
+RUN /home/archsci/temp/set_shell.sh
 RUN /home/archsci/temp/aur.sh
 
 
@@ -60,5 +63,6 @@ RUN /home/archsci/temp/aur.sh
 #===========================================
 RUN /home/archsci/temp/clean.sh
 
+RUN /bin/zsh
 
 CMD ["/bin/zsh"]
