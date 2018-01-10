@@ -20,24 +20,3 @@ Default shell prompt:
 docker pull fdiblen/archsci:latest
 ```
 
-## Julia version
-[![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=julia)](https://travis-ci.org/fdiblen/archsci)
-[![](https://imagelayers.io/badge/fdiblen/archsci:julia.svg)](https://imagelayers.io/?images=fdiblen/archsci:julia)
-```{r, engine='bash', count_lines}
-docker pull fdiblen/archsci:julia
-```
-see [Julia branch]
-
-## Anaconda version
-[![Build Status](https://travis-ci.org/fdiblen/archsci.svg?branch=anaconda)](https://travis-ci.org/fdiblen/archsci)
-[![](https://imagelayers.io/badge/fdiblen/archsci:anaconda.svg)](https://imagelayers.io/?images=fdiblen/archsci:anaconda)
-```{r, engine='bash', count_lines}
-docker pull fdiblen/archsci:anaconda
-```
-see [Anaconda branch]
-
-
-
-[Julia branch]: https://github.com/fdiblen/archsci/tree/julia
-[Anaconda branch]: https://github.com/fdiblen/archsci/tree/anaconda
-
