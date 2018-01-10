@@ -19,10 +19,9 @@ antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-
 antigen apply
 
 
-
 # Set prompt
 prompt_say_docker() {
-  prompt_segment yellow blue "archsci"
+  prompt_segment yellow blue "docker"
 }
 
 BULLETTRAIN_PROMPT_ORDER=(

@@ -24,9 +24,5 @@ pacman -S --force --noconfirm --needed \
     rsync unzip git vim \
     adobe-source-code-pro-fonts ttf-ubuntu-font-family terminus-font freetype2 \
     zsh sudo fontconfig ttf-symbola \
-    binutils gcc fakeroot make base-devel
-
-
-
-# mv /etc/pacman.conf.bck /etc/pacman.conf
-# pacman -Syyuu --noconfirm
+    binutils gcc fakeroot make base-devel \
+    yaourt
