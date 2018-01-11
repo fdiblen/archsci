@@ -19,3 +19,6 @@ echo "export SHELL=/usr/bin/zsh" >> /etc/profile
 
 sudo -H -u archsci bash -c '/home/archsci/temp/scripts/setup_ssh.sh'
 sudo -H -u root bash -c '/home/archsci/temp/scripts/setup_ssh.sh'
+
+sudo -H -u archsci bash -c 'ssh archsci@localhost'
+sudo -H -u root bash -c 'ssh root@localhost'

@@ -28,4 +28,3 @@ echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config
 echo "Host *" >> ~/.ssh/config
 echo "    StrictHostKeyChecking no" >> ~/.ssh/config
 chmod 400 ~/.ssh/config
-
