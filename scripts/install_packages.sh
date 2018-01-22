@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# clean cache
-rm -rf /var/cache/pacman/pkg/*
-
 pacman-key --refresh-keys
 
 cp /etc/pacman.conf /etc/pacman.conf.bck
@@ -17,12 +14,16 @@ rm -f /etc/localtime && \
 
 pacman -Syyuu --noconfirm
 
-#pacman-key --refresh-keys
+pacman -S --force --noconfirm --needed \
+     binutils gcc fakeroot make base-devel
 
 pacman -S --force --noconfirm --needed \
-    iproute2 net-tools wget curl htop \
+    iproute2 net-tools wget curl \
     rsync unzip git vim \
     adobe-source-code-pro-fonts ttf-ubuntu-font-family terminus-font freetype2 \
-    zsh sudo fontconfig ttf-symbola \
-    binutils gcc fakeroot make base-devel \
+    fontconfig ttf-symbola \
+    zsh sudo htop \
     yaourt
+
+#pacman -Rs --noconfirm \
+#     binutils gcc fakeroot make base-devel

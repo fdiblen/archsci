@@ -11,14 +11,19 @@ done
 
 # SSH
 #=========================================
-/usr/bin/ssh-keygen -A
-# SSH login fix. Otherwise user is kicked off after login
-#RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
-echo "export VISIBLE=now" >> /etc/profile
-echo "export SHELL=/usr/bin/zsh" >> /etc/profile
+#/usr/bin/ssh-keygen -A
+
+sed -i "s/GSSAPIAuthentication yes/GSSAPIAuthentication no/" /etc/ssh/sshd_config
+ssh-keygen -q -t dsa -f /root/.ssh/id_dsa -N '' -C 'key generated with docker'
+cat /root/.ssh/id_dsa.pub > /root/.ssh/authorized_keys
+
+#echo "export VISIBLE=now" >> /etc/profile
 
 sudo -H -u archsci bash -c '/home/archsci/temp/scripts/setup_ssh.sh'
 sudo -H -u root bash -c '/home/archsci/temp/scripts/setup_ssh.sh'
 
-sudo -H -u archsci bash -c 'ssh archsci@localhost'
-sudo -H -u root bash -c 'ssh root@localhost'
+cp ~/.ssh/id_rsa /etc/ssh/ssh_host_rsa_key
+cp  /root/.ssh/id_dsa /etc/ssh/ssh_host_dsa_key
+
+cat /root/.ssh/id_dsa.pub >> /home/archsci/.ssh/authorized_keys
+cat /home/archsci/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys

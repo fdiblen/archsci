@@ -46,6 +46,9 @@ RUN echo "archsci    ALL=(ALL)    NOPASSWD:ALL" >> /etc/sudoers.d/archsci
 WORKDIR /home/archsci
 RUN chown archsci:archsci -R /home/archsci
 
+RUN echo "export SHELL=/usr/bin/zsh" >> /etc/profile
+
+
 
 # NORMAL USER
 #===========================================
