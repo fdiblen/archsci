@@ -15,7 +15,9 @@ rm -f /etc/localtime && \
 pacman -Syyuu --noconfirm
 
 pacman -S --force --noconfirm --needed \
-     binutils gcc fakeroot make base-devel
+     binutils gcc fakeroot make base-devel maven 
+
+#     ipython2 ipython python2-pip python-pip 
 
 pacman -S --force --noconfirm --needed \
     iproute2 net-tools wget curl \
@@ -25,5 +27,5 @@ pacman -S --force --noconfirm --needed \
     zsh sudo htop \
     yaourt
 
-#pacman -Rs --noconfirm \
-#     binutils gcc fakeroot make base-devel
+#pacman -Rs ipython2 ipython python2-pip python-pip 
+
