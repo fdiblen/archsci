@@ -3,7 +3,7 @@ FROM base/archlinux:latest
 MAINTAINER fdiblen
 
 ENV container docker
-ENV LC_ALL C
+ENV LC_ALL en_US.UTF-8
 
 USER root
 
